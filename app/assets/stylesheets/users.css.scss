@@ -1,0 +1,91 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.invitation_outline {
+  border: 1px solid black;
+  padding: 30px 40px;
+  width: 600px;
+  margin: 0 auto;
+  background-image: url('/assets/bg2.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-color: white;
+}
+.invitation {
+  text-align: center;
+  font-size: 16pt;
+  line-height: 150%;
+  border: 3px solid silver;
+  padding: 15px;
+  font-family: "Monotype Corsiva",
+               "Apple Chancery",
+               "URW Chancery L",
+               "Palatino Linotype",
+               cursive;
+}
+
+hr {
+  width: 700px;
+  height: 1px;
+  border: 1px solid #222222;
+}
+
+.invitation_emphasis {
+  font-weight: bold;
+}
+
+.emphasis {
+  font-weight: bold;
+}
+
+.field {
+  clear: both;
+}
+.action {
+  clear: both;
+  padding-top: 10px;
+}
+
+.field label {
+  width: 150px;
+  float: left;
+  padding-left: 50px;
+  padding-right: 15px;
+  margin: 4px;
+  display: block;
+  vertical-align: middle;
+}
+.field_with_errors label {
+  font-weight: bold;
+  color: #DD0000;
+}
+.field_with_errors input {
+  background-color: #FFDDDD;
+}
+.field input {
+  float: left;
+}
+
+.vanilla_text {
+  float: left;
+}
+label.radio_text {
+  float: left;
+  padding: inherit;
+  margin: inherit;
+  margin-right: 25px;
+  display: inherit;
+  vertical-align: inherit;
+  width: inherit;
+}
+
+.edit_form {
+  width: 700px;
+  border: 1px solid black;
+  background-image: url('/assets/bg3.png');
+  background-repeat: repeat-y;
+  background-color: white;
+  margin: 0 auto;
+  padding: 15px;
+}

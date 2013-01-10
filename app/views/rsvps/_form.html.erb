@@ -1,0 +1,45 @@
+<%= form_for( [@user, @rsvp] ) do |f| %>
+  <% if @rsvp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rsvp.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @rsvp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="edit_form">
+<div class="field">
+<%= f.label :name, "Your name" %>
+<%= f.text_field :name %>
+</div>
+
+<div class="field">
+<%= f.label :attending, "Are you able to attend?" %>
+<%= f.radio_button :attending, "Yes" %> <%= f.label :attending_yes, "Yes", :class => 'radio_text' %>
+<%= f.radio_button :attending, "No" %> <%= f.label :attending_no, "No", :class => 'radio_text' %>
+<%= f.radio_button :attending, "Unsure" %> <%= f.label :attending_unsure, "Unsure", :class => 'radio_text' %>
+</div>
+
+<div class="field">
+<%= f.label :text, "Any comments?" %>
+<%= f.text_area :notes %>
+</div>
+
+<div class="field">
+<% if current_user_is_admin? %>
+  <%= f.label :is_child %>
+  <%= f.radio_button :is_child, true %> <%= f.label :is_child_true, "Yes", :class => 'radio_text' %>
+  <%= f.radio_button :is_child, false %> <%= f.label :is_child_false, "No", :class => 'radio_text' %>
+<% end %>
+</div>
+
+<div class="action">
+<%= f.submit "Update RSVP" %>
+</div>
+</div>
+<br />
+<% end %>
+

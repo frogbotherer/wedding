@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  name: MyString
+  attending: MyString
+  meal: MyString
+  dietreqs: MyString
+  notes: MyText
+
+two:
+  user: 
+  name: MyString
+  attending: MyString
+  meal: MyString
+  dietreqs: MyString
+  notes: MyText

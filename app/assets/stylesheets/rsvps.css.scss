@@ -1,0 +1,26 @@
+// Place all the styles related to the RSVPs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+img.attending {
+  float: right;
+  border: 0px;
+}
+
+.rotext {
+  line-height: 150%;
+}
+
+.rsvp {
+  background-image:url('/assets/bg1.png');
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+.rsvp_name {
+  font-weight: bold;
+}
+
+textarea {
+  height: 4em;
+}

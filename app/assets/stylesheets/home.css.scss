@@ -1,0 +1,78 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    width: 800px;
+//    background-color: #EEEEEE;
+    background-color: #EEEEEE;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.lmenu {
+  border: 1px solid black;
+  float: right;
+  padding: 15px 15px 15px 50px;
+  margin: 15px;
+  background-image: url('/assets/bg3.png');
+  background-color: white;
+  background-repeat: repeat-y;
+  line-height: 200%; 
+}
+
+.menu_link {
+
+}
+
+.info_text {
+  padding-left: 15px;
+}
+
+.proc_time {
+  font-weight: bold;
+  padding: 10px 40px 10px 15px ;
+  vertical-align: top;
+}
+.proc_thing {
+  padding: 10px;
+  width: 300px;
+}
+
+.hr {
+  height: 2px;
+  border: 0;
+  background-color: #333;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.nav {
+  background-color: white;
+  background-image: url('/assets/bg3.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  border: solid black 1px;
+  margin: 2px auto;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.nav a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.food_menu {
+  width: 420px;
+  text-align: center;
+  padding-left: 60px;
+}

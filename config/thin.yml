@@ -1,0 +1,3 @@
+port: 22440
+environment: production
+chdir: /home/p847647r/apps/wedding/current

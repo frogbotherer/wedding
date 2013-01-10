@@ -1,0 +1,20 @@
+<div class="rsvp">
+
+<div class="rotext; rsvp_name">
+<%= link_to image_tag(rsvp.attending + ".png", :alt => rsvp.attending, :class => "attending"), ['edit', @user, rsvp] %>
+<%= (rsvp.name.nil?||rsvp.name=="") && "(Please confirm guest's name)" || rsvp.name %>
+ <%= rsvp.is_child? && "(Child)" || "" %>
+</div>
+
+
+<div class="rotext">
+<%= rsvp.notes %>
+</div>
+
+<br/>
+<%= link_to rsvp.attending == 'Unsure' && 'RSVP' || 'Change these details', ['edit', @user, rsvp] %>
+
+<%= link_to_if (current_user_is_admin? || rsvp.is_child?), 'Remove', [@user,rsvp], :confirm => 'Are you sure?', :method => 'delete' do nil end %>
+
+</div>
+<div class="hr"></div>

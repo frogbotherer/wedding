@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<div class="invitation_outline">
+<div class="invitation">
+Miss Shonagh Buchan Dodd <br />
+and <br />
+Mr Christopher Edward West <br />
+request the pleasure of the company of <br />
+<span class="invitation_emphasis"><%= @user.fullname %></span> <br />
+at their marriage <br />
+at the Royal Chace Hotel, Enfield, EN2 8AR <br />
+on the 31st of March, 2012 <br />
+at 4pm <br />
+Reception to follow
+</div>
+</div>
+<h2 style="text-align: center"><%= @user.next_action %></h2>
+<div class="hr"></div>
+<%= link_to image_tag( (@user.is_valid_email? && "Yes" || "No") + ".png", :alt => @user.next_action, :class => "attending" ), edit_user_path(@user) %>
+
+<div class="rsvp">
+<div class="rotext">Invitation code: <%= @user.username %> </div>
+<div class="rotext">E-mail address: <%= @user.email %> </div>
+
+<br/>
+<%= link_to 'Change these details', edit_user_path(@user) %>
+</div>
+
+<div class="hr"></div>
+
+<%= render @user.rsvps %>
+
+<%= link_to 'Add Child(ren) to Invitation', new_user_rsvp_path(@user) %>
+
+
+<br/><br/><br/><br/>

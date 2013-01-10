@@ -1,0 +1,39 @@
+<%= form_tag user_sessions_path, :method => :post do %>
+
+  <div class="left_hand_box">
+  Please enter your personal code here:
+  <div class="narrow_field">
+    <%= label_tag :username, "Code" %>
+    <%= text_field_tag :username %>
+  </div>
+  <br/>
+  <div class="action">
+    <%= submit_tag "Login with Code" %>
+  </div>
+
+  </div>
+
+  <div class="right_hand_box">
+  Or you can log in with your e-mail address and password:
+  <div class="narrow_field">
+    <%= label_tag "E-mail" %>
+    <%= text_field_tag :email %>
+  </div>
+  <div class="narrow_field">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <br/>
+  <div class="action">
+    <%= submit_tag "Login with E-mail" %>
+  </div>
+  <div class="narrow_field">
+   <%= label_tag "keep me logged in" %>
+    <%= check_box_tag :remember %>
+  </div>
+  </div>
+
+<br clear="all" />
+<div class="hr"></div>
+<% end %>
+

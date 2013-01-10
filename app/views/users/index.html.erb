@@ -1,0 +1,26 @@
+<h1>All Invitations</h1>
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
+<table>
+  <tr>
+    <th>Invitation</th>
+    <th>Last Login</th>
+    <th>Confirmed?</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.fullname %></td>
+    <td><%= user.last_login_at %></td>
+    <td><% if user.has_confirmed? %><b style="color:green">Y</b><% end %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to_if current_user_is_admin?, 'New User', new_user_path do nil end %>

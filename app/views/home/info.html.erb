@@ -1,0 +1,18 @@
+
+<div class="lmenu">
+<%= link_to 'Venue', :show => :venue, :class => :menu_link %>
+<br />
+<%= link_to 'Places to stay', :show => :hotels, :class => :menu_link %>
+<br />
+<%= link_to 'Menu', :show => :menu, :class => :menu_link %>
+<br />
+<%= link_to 'Wedding list', :show => :gifts, :class => :menu_link %>
+<br />
+<%= link_to 'Order of proceedings', :show => :schedule, :class => :menu_link %>
+</div>
+
+<% if ['venue','hotels','menu','gifts','schedule'].include?( params[:show] ) || params[:show].nil? %>
+<div class="info_text">
+<%= render (params[:show] || 'venue') %>
+</div>
+<% end %>

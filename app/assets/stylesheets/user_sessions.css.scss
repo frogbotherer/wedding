@@ -1,0 +1,36 @@
+// Place all the styles related to the user_sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.left_hand_box {
+    border: 1px solid black;
+    padding: 5px 10px 5px 10px;
+    margin-left: 3%;
+    width: 40%;
+    float: left;
+    background-image: url('/assets/bg3.png');
+    background-repeat: repeat-y;
+    background-color: white;
+}
+
+.right_hand_box {
+    border: 1px solid black;
+    padding: 5px 10px 5px 10px;
+    margin-right: 5%;
+    width: 40%;
+    float: right;
+    background-image: url('/assets/bg3.png');
+    background-repeat: repeat-y;
+    background-color: white;
+}
+
+.narrow_field label {
+    width: 100px;
+    padding-left: 40px;
+    margin-top: 4px;
+    float: left;
+}
+.narrow_field input {
+    margin-top: 4px;
+    float: left;
+}
